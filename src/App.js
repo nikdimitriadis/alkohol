@@ -1,10 +1,7 @@
 function App() {
   return (
     <div>
-      <h1>asdasdadadada</h1>
-      <h1>asdasdadadada</h1>
-      <h1>asdasdadadada</h1>
-      <h1>asdasdadadada</h1>
+      <h1>clone comming</h1>
     </div>
   );
 }
