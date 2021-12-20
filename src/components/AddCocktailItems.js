@@ -1,7 +1,7 @@
 const AddCocktailItems = () => {
     return (  
-        <article>
-            <h2>Füge deine eigenen Getränke hinzu!</h2>
+        <article className="headerFooter">
+            <h2 className="fontPlayfair">Füge deine eigenen Getränke hinzu!</h2>
             <div>
             <form action="">
                 <input type="text" name="" id="name" placeholder="Name"/>
@@ -19,7 +19,7 @@ const AddCocktailItems = () => {
                 <input type="text" name="" id="amountIncredient2" placeholder="Menge Zutat 2"/>
                 <input type="text" name="" id="incredient3" placeholder="Zutat 3"/>
                 <input type="text" name="" id="amountIncredient3" placeholder="Menge Zutat 3"/>
-                <input type="submit" value="Submit" />
+                <input className="button" type="submit" value="Submit" />
             </form>
             <div>
                 <img src="" alt="Bild1" />

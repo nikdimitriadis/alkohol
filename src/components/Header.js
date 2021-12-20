@@ -2,17 +2,16 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
     return (
-        <header>
+        <header className="headerFooter">
             <nav>
-                <p>DRINKS&CHILL</p>
+                <p className="fontPlayfair">DRINKS&CHILL</p>
                 <Link to="/">MENU</Link>
             </nav>
-            <h1>Cocktails & Getränke</h1>
-            <p>Herzlich Willkommen in der Welt der Cocktails und Getränke!
-            </p>
+            <h1 className="fontPlayfair">Cocktails & Getränke</h1>
+            <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE</p>
             <div>
                 <input type="text" name="" id="" />
-                <input type="button" value="SEARCH" />
+                <input className="button" type="button" value="SEARCH" />
             </div>
         </header>
     );
