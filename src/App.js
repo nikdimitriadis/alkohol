@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 // Components & Pages
 import Main from './pages/Main.js';
 import OverviewDrink from './pages/OverviewDrink.js';
-// import AddYourTail from './pages/AddYourTail.js';
+import AddYourCocktail from './pages/AddYourCocktail.js';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main/>}></Route>
             <Route path="/drinks" element={<OverviewDrink/>}></Route>
-            {/* <Route path="/addyourcocktail" element={<AddYourTail/>}></Route>  */}
+            <Route path="/addyourcocktail" element={<AddYourCocktail/>}></Route>
           </Routes>   
       </Router>  
     </div>
