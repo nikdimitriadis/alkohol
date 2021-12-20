@@ -1,8 +1,21 @@
+import './App.scss';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+// Components & Pages
+import Main from './pages/Main.js';
+import OverviewDrink from './pages/OverviewDrink.js';
+import AddYourCocktail from './pages/AddYourCocktail.js';
+
 function App() {
   return (
-    <div>
-      <h1>hallo Nik</h1>
-      <div>hallo</div>
+    <div className="App">
+      <Router>      
+          <Routes>
+            <Route path="/" element={<Main/>}></Route>
+            <Route path="/drinks" element={<OverviewDrink/>}></Route>
+            <Route path="/addyourcocktail" element={<AddYourCocktail/>}></Route>
+          </Routes>   
+      </Router>  
     </div>
   );
 }
