@@ -1,9 +1,11 @@
+import {Link} from 'react-router-dom'
+
 const Header = () => {
     return (
         <header>
             <nav>
                 <p>DRINKS&CHILL</p>
-                <a href="#">MENU</a>
+                <Link to="/">MENU</Link>
             </nav>
             <h1>Cocktails & Getränke</h1>
             <p>Herzlich Willkommen in der Welt der Cocktails und Getränke!
