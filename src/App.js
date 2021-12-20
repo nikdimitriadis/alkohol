@@ -1,14 +1,14 @@
 import './App.scss';
-import Nav from './components/Nav.js';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
-
+// Components & Pages
+import Header from './components/Header.js';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Nav/>
+        <Header/>
       </Router>
       
     </div>
