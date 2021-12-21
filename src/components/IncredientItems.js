@@ -1,6 +1,6 @@
 const IncredientItems = () => {
     return (  
-        <article>
+        <article className="headerFooter">
             <h3>Cocktail Name</h3>
             <img src="" alt="bild" />
             <h5>Zutaten</h5>

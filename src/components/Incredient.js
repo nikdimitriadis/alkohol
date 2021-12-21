@@ -1,11 +1,11 @@
 import IncredientItems from './IncredientItems.js';
 
 class Incredients extends React.Component {
-    render() { 
+    render() {
         return (
-            <IncredientItems/>
+            <IncredientItems />
         );
     }
 }
- 
+
 export default Incredients;

@@ -1,6 +1,5 @@
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
-import AddYourCocktail from './AddYourCocktail'
 import {Link} from 'react-router-dom';
 
 
