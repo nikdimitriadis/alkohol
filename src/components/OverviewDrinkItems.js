@@ -8,3 +8,5 @@ const OverviewDrinkItems = () => {
 }
 
 export default OverviewDrinkItems;
+
+/* Seite 2 */
