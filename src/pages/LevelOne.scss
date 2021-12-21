@@ -1,0 +1,13 @@
+.overviewItems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .overview {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        background-color: #6fc3df;
+        padding-left: 5vw;
+        height: 30vh;
+    }
+}
