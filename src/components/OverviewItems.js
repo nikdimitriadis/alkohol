@@ -4,7 +4,7 @@ import DataOverview from "./DataOverview.js";
 
 const OverviewItems = () => {
     return (
-        <section>
+        <section className='overviewItems'>
             {
                 DataOverview.map((e, i) => <OverviewTemp
                     key={i}
