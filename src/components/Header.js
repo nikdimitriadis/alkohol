@@ -4,9 +4,10 @@ import { Link, Outlet } from "react-router-dom";
 const Header = () => {
   const [searchValue, setSearchValue] = useState("");
 
-  const submitHandler = (e) => {
-    e.preventDefault();
+  const submitHandler = () => {
+    console.log("submit");
     setSearchValue("");
+    // e.preventDefault();
   };
 
   const changeHandler = (e) => {
@@ -21,9 +22,9 @@ const Header = () => {
       </nav>
       <h1 className="fontPlayfair">Cocktails & Getränke</h1>
       <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE</p>
-      <form onSubmit={submitHandler}>
+      <form>
         <input value={searchValue} type="text" onChange={changeHandler} />
-        <Link to={`/search/${searchValue}`}>
+        <Link to={`/search/${searchValue}`} onClick={submitHandler}>
           <input className="button" type="submit" />
         </Link>
         <Outlet />
