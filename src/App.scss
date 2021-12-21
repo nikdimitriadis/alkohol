@@ -44,7 +44,7 @@ font-family: 'Montserrat', sans-serif;*/
     p {
       line-height: 25px;
     }
-    div {
+    form {
       margin-top: 5vh;
       input {
         padding: 8px 12px;
@@ -61,4 +61,28 @@ font-family: 'Montserrat', sans-serif;*/
 a {
   color: whitesmoke;
   text-decoration: none;
+}
+.ingredients {
+  padding: 30px;
+  border: 2px solid whitesmoke;
+  .close {
+    text-align: right;
+  }
+  article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 300px;
+    }
+    div {
+      h2 {
+        font-size: 30px;
+      }
+      h3,
+      .description {
+        margin: 3vh 0 2vh 0;
+      }
+    }
+  }
 }

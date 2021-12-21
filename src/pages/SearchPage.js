@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 import useFetch from "../components/hooks/useFetch";
 import Modal from "../components/Modal/Modal";
 
-
-const LevelOne = () => {
+const SearchPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedStrDrink, setSelectedStrDrink] = useState("");
-
   const params = useParams();
+  console.log(params);
+
   const { data, isLoading } = useFetch(
-    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${params.category}`
+    `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${params.drinks}`
   );
 
   const dataFromApi = data?.drinks ?? {};
@@ -20,19 +20,18 @@ const LevelOne = () => {
     setSelectedStrDrink(() => strDrink);
   };
 
+  console.log(dataFromApi);
   return (
     <section className='overviewItems'>
-
       {isLoading && <div>loading</div>}
       {showModal && (
         <Modal closeModalFn={handleToggleModal} strDrink={selectedStrDrink} />
       )}
       {Object.keys(dataFromApi)?.map((key) => (
-        <article
-          className={`
-			style${Math.floor((key % 6) + 1)}
-			${key % 2 === 0 ? 'left' : 'right'}
-			`}
+        <article className={`
+        style${Math.floor((key % 6) + 1)}
+        ${key % 2 === 0 ? 'left' : 'right'}
+        `}
           key={key}
           onClick={handleToggleModal.bind(null, dataFromApi[key].strDrink)}
         >
@@ -41,8 +40,8 @@ const LevelOne = () => {
           <h2>{dataFromApi[key].strDrink}</h2>
         </article>
       ))}
-
     </section>
   );
 };
-export default LevelOne;
+
+export default SearchPage;
