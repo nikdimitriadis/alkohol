@@ -1,5 +1,5 @@
-import { Route, Routes, Navigate } from "react-router-dom";
-import Testlink from "./components/Testlink";
+// import { Route, Routes, Navigate } from "react-router-dom";
+// import Testlink from "./components/Testlink";
 // import CocktailDetails from "./components/CocktailDetails";
 // import Gin from "./pages/Gin";
 // import Vodka from "./pages/Vodka";
