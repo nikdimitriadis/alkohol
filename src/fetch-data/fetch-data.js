@@ -25,10 +25,10 @@ export const FetchContextProvider = (props) => {
   const [random, setRandom] = useState([]);
   const [cocktailName, setCocktailName] = useState("");
 
-  console.log("trexw");
+  // console.log("trexw");
 
   async function giveGin() {
-    console.log("trexw");
+    // console.log("trexw");
     setIsLoaded(true);
     try {
       const response = await fetch(
