@@ -1,6 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 const links = [
   {
@@ -32,7 +31,7 @@ const links = [
 const Home = () => {
   return (
     <section>
-      <Header />
+
       <section className='overviewItems'>
 
         {links.map((link, index) => (
@@ -43,7 +42,7 @@ const Home = () => {
         ))}
 
       </section>
-      <Footer />
+
       <Outlet />
     </section>
   );
