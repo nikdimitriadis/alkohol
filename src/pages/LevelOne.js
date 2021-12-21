@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../components/hooks/useFetch";
 import Modal from "../components/Modal/Modal";
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const LevelOne = () => {
   const [showModal, setShowModal] = useState(false);
@@ -21,20 +23,22 @@ const LevelOne = () => {
 
   return (
     <>
+
       {isLoading && <div>loading</div>}
       {showModal && (
         <Modal closeModalFn={handleToggleModal} strDrink={selectedStrDrink} />
       )}
       {Object.keys(dataFromApi)?.map((key) => (
-        <div
+        <article
           key={key}
           onClick={handleToggleModal.bind(null, dataFromApi[key].strDrink)}
         >
           {" "}
           <img src={dataFromApi[key].strDrinkThumb} />
-          <h1>{dataFromApi[key].strDrink}</h1>
-        </div>
+          <h2>{dataFromApi[key].strDrink}</h2>
+        </article>
       ))}
+
     </>
   );
 };
