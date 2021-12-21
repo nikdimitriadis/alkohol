@@ -1,13 +1,15 @@
 import { NavLink, Outlet } from "react-router-dom";
 
-const links = ["gin", "vodka", "rum", "ASSD"];
+const links = ["Gin", "Vodka", "Rum", "Scotch", "Free", "Random"];
 
 const Home = () => {
   return (
     <div>
       <div>asdds</div>
-      {links.map((link) => (
-        <NavLink to={`${link}`}>{link}</NavLink>
+      {links.map((link, index) => (
+        <NavLink key={index} to={`${link}`}>
+          {link}
+        </NavLink>
       ))}
       <Outlet />
     </div>

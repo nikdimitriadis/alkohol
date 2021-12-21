@@ -1,12 +1,12 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import Testlink from "./components/Testlink";
 // import CocktailDetails from "./components/CocktailDetails";
-import Gin from "./pages/Gin";
-import Vodka from "./pages/Vodka";
-import Rum from "./pages/Rum";
-import Scotch from "./pages/Scotch";
-import Free from "./pages/Free";
-import Random from "./pages/Random";
+// import Gin from "./pages/Gin";
+// import Vodka from "./pages/Vodka";
+// import Rum from "./pages/Rum";
+// import Scotch from "./pages/Scotch";
+// import Free from "./pages/Free";
+// import Random from "./pages/Random";
 import MainRoutes from "./routes/MainRoutes";
 
 function App() {

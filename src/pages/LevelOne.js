@@ -30,7 +30,9 @@ const LevelOne = () => {
           key={key}
           onClick={handleToggleModal.bind(null, dataFromApi[key].strDrink)}
         >
-          {dataFromApi[key].strDrink}
+          {" "}
+          <img src={dataFromApi[key].strDrinkThumb} />
+          <h1>{dataFromApi[key].strDrink}</h1>
         </div>
       ))}
     </>
