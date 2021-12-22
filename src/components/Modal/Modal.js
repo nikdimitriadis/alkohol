@@ -9,12 +9,44 @@ const Modal = ({ strDrink, closeModalFn }) => {
     return null;
   }
   const { drinks } = data;
-  console.log(drinks[0]);
+
+  const lastObj = drinks[0];
+
+  const ingredients = [];
+  const measures = [];
+
+  let number = 0;
+  for (let key in lastObj) {
+    number++;
+    if (lastObj[key] != null) {
+      if (key.startsWith("strIngredient")) {
+        ingredients.push(lastObj[key]);
+      }
+
+      if (key.startsWith("strMeasure")) {
+        measures.push(lastObj[key]);
+      }
+    }
+  }
+  const all = ingredients.map((item, index) => {
+    return {
+      [index]: `${item} ${measures[index]}`,
+    };
+  });
+  const content = all.map((item, index) => {
+    return (
+      <p style={{ color: "red" }} key={index}>
+        {item[index]}
+      </p>
+    );
+  });
+
   return (
     <div>
       <div onClick={closeModalFn}>close</div>
-      {drinks[0].strDrink}
-      {<img src={drinks[0].strDrinkThumb} />}
+      {lastObj.strDrink}
+      {<img src={lastObj.strDrinkThumb} />}
+      {content}
     </div>
   );
 };
