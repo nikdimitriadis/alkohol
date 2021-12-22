@@ -32,15 +32,18 @@ const Home = () => {
     <section>
       <section className="overviewItems">
         {links.map((link, index) => (
-          <NavLink className="overview" key={index} to={`${link.drink}`}>
-            <h2>{link.drink}</h2>
+          <NavLink className={`${'overview'} ${`
+          style${Math.floor((index % 6) + 1)}`} 
+          `} key={index} to={`${link.drink}`}>
+            < h2 > {link.drink}</h2>
             <p>{link.info}</p>
           </NavLink>
-        ))}
-      </section>
+        ))
+        }
+      </section >
 
       <Outlet />
-    </section>
+    </section >
   );
 };
 

@@ -4,8 +4,8 @@ import { Link, Outlet } from "react-router-dom";
 const Header = () => {
   const [searchValue, setSearchValue] = useState("");
 
-  const submitHandler = () => {
-    console.log("submit");
+  const submitHandler = (e) => {
+    /*  e.preventDefault(); */
     setSearchValue("");
     // e.preventDefault();
   };
@@ -16,20 +16,24 @@ const Header = () => {
 
   return (
     <header className="headerFooter">
-      <nav>
+      <nav className="Navi">
         <p className="fontPlayfair">DRINKS&CHILL</p>
-        <Link to="/">MENU</Link>
+        <Link to="/">HOME</Link>
       </nav>
-      <h1 className="fontPlayfair">Cocktails & Getränke</h1>
-      <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE</p>
-      <form>
-        <input value={searchValue} type="text" onChange={changeHandler} />
-        <Link to={`/search/${searchValue}`} onClick={submitHandler}>
-          <input className="button" type="submit" />
-        </Link>
-        <Outlet />
-        {/* {'dinamiko message'} */}
-      </form>
+      <article>
+        <h1 className="fontPlayfair">Cocktails & Getränke</h1>
+        <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE</p>
+        <form>
+          <input value={searchValue} type="text" onChange={changeHandler} />
+          <Link to={`/search/${searchValue}`} onClick={submitHandler}>
+            <button className="button" type="submit">
+              Suchen
+            </button>
+          </Link>
+          <Outlet />
+          {/* {'dinamiko message'} */}
+        </form>
+      </article>
     </header>
   );
 };

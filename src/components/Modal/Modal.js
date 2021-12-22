@@ -9,12 +9,9 @@ const Modal = ({ strDrink, closeModalFn }) => {
     return null;
   }
   const { drinks } = data;
-
   const lastObj = drinks[0];
-
   const ingredients = [];
   const measures = [];
-
   let number = 0;
   for (let key in lastObj) {
     number++;
@@ -34,20 +31,25 @@ const Modal = ({ strDrink, closeModalFn }) => {
     };
   });
   const content = all.map((item, index) => {
-    return (
-      <p style={{ color: "red" }} key={index}>
-        {item[index]}
-      </p>
-    );
+    return <p key={index}>{item[index]}</p>;
   });
 
   return (
-    <div>
-      <div onClick={closeModalFn}>close</div>
-      {lastObj.strDrink}
-      {<img src={lastObj.strDrinkThumb} />}
-      {content}
-    </div>
+    <section className="ingredients popUp">
+      <p onClick={closeModalFn} className="close">
+        close
+      </p>
+      <article>
+        <img src={lastObj.strDrinkThumb} alt={lastObj.strDrink} />
+        <div>
+          <h2 className="fontPlayfair">{lastObj.strDrink}</h2>
+          <h3>Zutaten</h3>
+          {content}
+          {/*  <p>{lastObj.strMeasure1}{lastObj.strIngredient1} </p> */}
+          <p className="description"> {lastObj.strInstructionsDE}</p>
+        </div>
+      </article>
+    </section>
   );
 };
 
