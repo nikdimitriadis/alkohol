@@ -22,7 +22,7 @@ const links = [
     info: "Heute Abend darf es mal alkoholfrei sein. Einer muss am Ende ja den Taxifahrer spielen.",
   },
   {
-    drink: "Zufall",
+    drink: "Random",
     info: "Lorem ipsum dolor",
   },
 ];

@@ -33,3 +33,5 @@ const Modal = ({ strDrink, closeModalFn }) => {
 };
 
 export default Modal;
+
+
