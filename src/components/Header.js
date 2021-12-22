@@ -24,7 +24,7 @@ const Header = () => {
         <h1 className="fontPlayfair">Cocktails & Getränke</h1>
         <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE</p>
         <form>
-          <input value={searchValue} type="text" onChange={changeHandler} />
+          <input value={searchValue} type="text" onChange={changeHandler} placeholder='type something' />
           <Link to={`/search/${searchValue}`} onClick={submitHandler}>
             <button className="button" type="submit">
               Suchen

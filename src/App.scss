@@ -8,6 +8,7 @@ font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif;*/
 
 * {
+  max-width: 1440px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,6 +16,7 @@ font-family: 'Montserrat', sans-serif;*/
 .App {
   font-family: "Montserrat", sans-serif;
   color: whitesmoke;
+  overflow: hidden;
 }
 .fontPlayfair {
   font-family: "Playfair Display", serif;
@@ -55,12 +57,22 @@ font-family: 'Montserrat', sans-serif;*/
   }
 }
 .button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
   background-color: #6fc3df;
   margin-left: 10px;
+  &:hover {
+    text-decoration: underline;
+  }
 }
+
 a {
   color: whitesmoke;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .left {
   img {
@@ -126,12 +138,13 @@ a {
     }
   }
 }
+
 .popUp {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   width: 80%;
   left: 10%;
-  top: 40%;
+  top: 10%;
   div {
     h2 {
       transform: rotate(0deg);
@@ -144,7 +157,30 @@ a {
     height: 65vh;
   }
   .popUp {
+    position: fixed;
+    width: 80%;
+    height: 80%;
     top: 5%;
-    left: 1%;
+    left: 10%;
+    overflow: auto;
+  }
+
+  .ingredients {
+    article {
+      display: block;
+      margin: 0 auto;
+
+      img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+      }
+      div {
+        margin: 0 auto;
+        h2 {
+          text-align: left;
+        }
+      }
+    }
   }
 }

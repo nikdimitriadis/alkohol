@@ -38,7 +38,10 @@
         article {
             justify-content: space-evenly;
             h2 {
-                height: min-content;
+                height: max-content;
+            }
+            img {
+                width: 60%;
             }
         }
     }

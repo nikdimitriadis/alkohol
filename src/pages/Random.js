@@ -33,8 +33,8 @@ const Random = () => {
           className={`${"overview"} ${`
         style${Math.floor((key % 6) + 1)}`}`}
 
-          // key={key}
-          // onClick={handleToggleModal.bind(null, dataFromApi[key].strDrink)}
+        // key={key}
+        // onClick={handleToggleModal.bind(null, dataFromApi[key].strDrink)}
         >
           {" "}
           {/* <img src={dataFromApi[key].strDrinkThumb} alt={dataFromApi[key].strDrink} />
@@ -70,7 +70,6 @@ const Random = () => {
               {dataFromApi[key].strMeasure6}
               {dataFromApi[key].strIngredient6}{" "}
             </p>
-
             <p className="description"> {dataFromApi[key].strInstructionsDE}</p>
           </div>
         </article>
