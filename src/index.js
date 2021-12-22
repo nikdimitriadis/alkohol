@@ -4,16 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { FetchContextProvider } from "./fetch-data/fetch-data";
+// import { FetchContextProvider } from "./fetch-data/fetch-data";
 
 ReactDOM.render(
-  <FetchContextProvider>
-    <BrowserRouter>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </BrowserRouter>{" "}
-  </FetchContextProvider>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>,
+
   document.getElementById("root")
 );
 

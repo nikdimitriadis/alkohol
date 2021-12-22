@@ -1,7 +1,7 @@
 import useFetch from "../hooks/useFetch";
 
 const Modal = ({ strDrink, closeModalFn }) => {
-  const { data, isLoading } = useFetch(
+  const { data } = useFetch(
     ` https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${strDrink}`
   );
 
@@ -12,9 +12,8 @@ const Modal = ({ strDrink, closeModalFn }) => {
   const lastObj = drinks[0];
   const ingredients = [];
   const measures = [];
-  let number = 0;
+
   for (let key in lastObj) {
-    number++;
     if (lastObj[key] != null) {
       if (key.startsWith("strIngredient")) {
         ingredients.push(lastObj[key]);
