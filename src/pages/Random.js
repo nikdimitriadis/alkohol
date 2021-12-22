@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import useFetch from "../components/hooks/useFetch";
 import Modal from "../components/Modal/Modal";
 
@@ -7,7 +7,7 @@ const Random = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedStrDrink, setSelectedStrDrink] = useState("");
 
-  const params = useParams();
+  // const params = useParams();
   const { data, isLoading } = useFetch(
     `https://www.thecocktaildb.com/api/json/v1/1/random.php`
   );
