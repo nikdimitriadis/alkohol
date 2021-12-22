@@ -11,7 +11,7 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:category" element={<LevelOne />} />
-        <Route path="/free" element={<Free />} />
+        <Route path="/Alkoholfrei" element={<Free />} />
         <Route path="/random" element={<Random />} />
         <Route path="/search/:drinks" element={<SearchPage />} />
       </Routes>
