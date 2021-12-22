@@ -9,23 +9,46 @@ const Modal = ({ strDrink, closeModalFn }) => {
     return null;
   }
   const { drinks } = data;
-  console.log(drinks[0]);
+  const lastObj = drinks[0];
+  const ingredients = [];
+  const measures = [];
+  let number = 0;
+  for (let key in lastObj) {
+    number++;
+    if (lastObj[key] != null) {
+      if (key.startsWith("strIngredient")) {
+        ingredients.push(lastObj[key]);
+      }
+
+      if (key.startsWith("strMeasure")) {
+        measures.push(lastObj[key]);
+      }
+    }
+  }
+  const all = ingredients.map((item, index) => {
+    return {
+      [index]: `${item} ${measures[index]}`,
+    };
+  });
+  const content = all.map((item, index) => {
+    return (
+      <p key={index}>
+        {item[index]}
+      </p>
+    );
+  });
+
   return (
-    <section className='ingredients'>
+    <section className='ingredients popUp'>
       <p onClick={closeModalFn} className='close'>close</p>
       <article>
-        <img src={drinks[0].strDrinkThumb} alt={drinks[0].strDrink} />
+        <img src={lastObj.strDrinkThumb} alt={lastObj.strDrink} />
         <div>
-          <h2 className="fontPlayfair">{drinks[0].strDrink}</h2>
+          <h2 className="fontPlayfair">{lastObj.strDrink}</h2>
           <h3>Zutaten</h3>
-          <p>{drinks[0].strMeasure1}{drinks[0].strIngredient1} </p>
-          <p>{drinks[0].strMeasure2}{drinks[0].strIngredient2} </p>
-          <p>{drinks[0].strMeasure3}{drinks[0].strIngredient3} </p>
-          <p>{drinks[0].strMeasure4}{drinks[0].strIngredient4} </p>
-          <p>{drinks[0].strMeasure5}{drinks[0].strIngredient5} </p>
-          <p>{drinks[0].strMeasure6}{drinks[0].strIngredient6} </p>
-
-          <p className='description'> {drinks[0].strInstructionsDE}</p>
+          {content}
+          {/*  <p>{lastObj.strMeasure1}{lastObj.strIngredient1} </p> */}
+          <p className='description'> {lastObj.strInstructionsDE}</p>
         </div>
       </article>
     </section>

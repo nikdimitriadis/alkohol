@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: #262b46;
+    grid-gap: 2px;
     article {
         display: flex;
         justify-content: space-between;
@@ -12,37 +13,11 @@
             width: 200px;
             text-align: center;
         }
-    }
-    .left {
         img {
             width: 240px;
-            order: 0;
         }
     }
-    .right {
-        img {
-            width: 240px;
-            order: 1;
-        }
-    }
-    .style1 {
-        background: #87c5a4;
-    }
-    .style2 {
-        background: #6fc3df;
-    }
-    .style3 {
-        background: #ec8d81;
-    }
-    .style4 {
-        background: #8d82c4;
-    }
-    .style5 {
-        background: #e7b788;
-    }
-    .style6 {
-        background: #8ea9e8;
-    }
+
     .overview {
         display: flex;
         justify-content: center;
@@ -53,6 +28,18 @@
         h2 {
             font-size: 50px;
             font-family: "Playfair Display", serif;
+        }
+    }
+}
+/* ################ MediaQueries ################### */
+@media only screen and (max-width: 600px) {
+    .overviewItems {
+        grid-template-columns: repeat(1, 1fr);
+        article {
+            justify-content: space-evenly;
+            h2 {
+                height: min-content;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ const Header = () => {
   const [searchValue, setSearchValue] = useState("");
 
   const submitHandler = (e) => {
-    e.preventDefault();
+    /*  e.preventDefault(); */
     setSearchValue("");
   };
 
@@ -22,16 +22,16 @@ const Header = () => {
       <article>
         <h1 className="fontPlayfair">Cocktails & Getränke</h1>
         <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE</p>
-        <form onSubmit={submitHandler}>
-          <input value={searchValue} type="text" placeholder='type something' onChange={changeHandler} />
-          <Link to={`/search/${searchValue}`}>
-            <input className="button" type="submit" />
+        <form>
+          <input value={searchValue} type="text" onChange={changeHandler} />
+          <Link to={`/search/${searchValue}`} onClick={submitHandler}>
+            <button className="button" type="submit" >Suchen</button>
           </Link>
           <Outlet />
           {/* {'dinamiko message'} */}
         </form>
       </article>
-    </header>
+    </header >
   );
 };
 
