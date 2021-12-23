@@ -64,6 +64,7 @@ font-family: 'Montserrat', sans-serif;*/
   margin-left: 10px;
   &:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 }
 
@@ -117,6 +118,10 @@ a {
   background-color: #262b46;
   .close {
     text-align: right;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
   article {
     display: flex;
@@ -130,6 +135,7 @@ a {
       padding: 2em;
       h2 {
         font-size: 30px;
+        text-align: left;
       }
       h3,
       .description {
@@ -138,7 +144,9 @@ a {
     }
   }
 }
-
+/* .popUpHeadline {
+  text-align: left;
+} */
 .popUp {
   position: fixed;
   z-index: 1;
